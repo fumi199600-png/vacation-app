@@ -3,7 +3,7 @@ import { useState, useEffect, useCallback } from "react";
 // --- 設定項目 ---
 const GAS_URL = "https://script.google.com/macros/s/AKfycbwMdnafA0BNM0TlTPhp7nQcrT58cL44KbZfdYuZaeYxQiy_bwCvyrbDShN6WWAOUFu3/exec";
 const HOURS_PER_DAY = 7.75; 
-const NS_HOURS_PER_DAY = 8.0; 
+const NS_HOURS_PER_DAY = 7.75; 
 
 const defaultSettings = {
   user1: "ともひろ",
@@ -341,7 +341,7 @@ export default function App() {
             {records.length === 0 ? (
               <div style={{ textAlign: "center", color: "#999", marginTop: 20 }}>記録がありません</div>
             ) : (
-              records.slice(0, 10).map((r) => (
+              records.slice(0, 100).map((r) => (
                 <div key={r.id} style={S.historyRow}>
                   <div style={S.historyLeft}>
                     <div style={{ fontSize: 11, color: "#999" }}>{new Date(r.date).toLocaleDateString()}</div>
